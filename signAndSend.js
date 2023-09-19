@@ -9,7 +9,7 @@ const recepientAddress = "0x9949f7e672a568bB3EBEB777D5e8D1c1107e96E5";
 
 console.log("Sending 1 ether from address:", senderAddress, "to address:", recepientAddress);
 
-async function transfer() {
+async function signAndSend() {
     // nonce starts at 0 and increments by 1 after each transaction
     const nonce = await web3.eth.getTransactionCount(senderAddress, "latest");
 
@@ -40,4 +40,4 @@ async function transfer() {
 
 }
 
-transfer();
+signAndSend();
